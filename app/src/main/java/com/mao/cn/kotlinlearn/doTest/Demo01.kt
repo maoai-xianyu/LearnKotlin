@@ -63,6 +63,22 @@ fun main(args: Array<String>) {
     println(addVararg(2, 5, 2, 4, 5, 5))
     arrayFun()
     arrayNull()
+
+    //----------
+    operatorFun()
+
+    //------when
+    whenFun(1)
+    whenFun(3)
+    whenFun(20)
+
+    whenFunNum(2)
+
+    //------ fun
+    forFun()
+
+    breakFun()
+
 }
 
 fun maxof(a: Int, b: Int): Int {
@@ -218,11 +234,136 @@ fun arrayNull() {
 
     for (square in squares) {
 
-        println("  square "+square)
+        println("  square " + square)
     }
 
 
-    squares.forEach { i: Int -> println("  测试  "+i) }
+    squares.forEach { i: Int -> println("  测试  " + i) }
 
     squares.forEach { println(it) }
 }
+
+//--------------------- 运算符
+fun operatorFun() {
+
+    val num1 = 1
+    val num2 = 1
+    println((num1 == num2))
+
+
+    val a = " test1"
+    val b = " test2"
+    println("测试  " + (a?.equals(b) ?: (b == null)))
+    println("测试  " + !(a?.equals(b) ?: (b == null)))
+
+
+    val c = ""
+    val d = " test2"
+    println("测试  " + (c?.equals(d) ?: (d == null)))
+    println("测试  " + !(c?.equals(d) ?: (d == null)))
+
+
+    val e = ""
+    val f = ""
+    println("测试  " + (e?.equals(f) ?: (f == null)))
+    println("测试  " + !(e?.equals(f) ?: (f == null)))
+
+
+}
+
+//--------------when  ---- switch
+fun whenFun(x: Any) {
+
+    when (x) {
+        1, 2 -> println("x = $x")
+        else -> println(" x is nerther 1 0r 2")
+    }
+
+    when (x) {
+
+        !is Int -> println("x = $x")
+        in 0..10 -> println("x = $x  x is between 0 and 10")
+        else -> println(" x is over 10 ")
+    }
+
+}
+
+fun whenFunNum(x: Int) {
+
+    val isOdd = when {
+        (x and 1) == 1 -> true
+        else -> false
+    }
+
+    println("  isOdd " + isOdd)
+}
+
+//------------- for
+fun forFun() {
+
+    val arrayInt = intArrayOf(1, 2, 3, 4, 5)
+    for (item in arrayInt) {
+        println(" $item")
+        println(" 测试  " + item)
+    }
+
+    arrayInt.forEach { println("  HAH  " + it) }
+
+    // 遍历数组角标
+    for (item in arrayInt.indices) {
+        println(" arrayInt[$item]  is " + arrayInt[item])
+        println(" arrayInt[$item]  is ${arrayInt[item]}")
+    }
+
+    // withIndex
+    for ((index, value) in arrayInt.withIndex()) {
+
+        println(" arrayInt[$index]  is $value")
+    }
+
+    for (i in 1..5) println(i) //输出 1 到 5 的数字
+
+    for (i in 5 downTo 1) println(i) //输出 5 到 1 的数字
+
+    for (i in 5 downTo 1 step 3) println(i) //输出 5 2
+
+    for (i in 1..5 step 2) println(i) //输出 1 3 5
+
+}
+
+//----------------- break   continue   return   loop 循环
+//---- 注意 return 后面的写法，换行和不换行有特别大的差距
+fun breakFun() {
+    loop@ for (i in 1..10) {
+        println("  i  is $i")
+        for (j in 1..10) {
+            if (i == 3) break@loop //终止 i 循环
+        }
+    }
+
+
+    val ints = intArrayOf(1, 3, 3, 4)
+
+
+    ints.forEach {
+        if (it == 3) return println(" 不换行 it " + it)
+    }
+
+    ints.forEach {
+        if (it == 3) return
+        println(" 换行it " + it)
+    }
+
+    ints.forEach lit@ {
+        if (it == 3) return@lit
+        println(" 换行it " + it)
+    }
+
+    ints.forEach {
+        if (it == 3) return@forEach
+        println(" forEach换行it " + it)
+    }
+}
+
+
+
