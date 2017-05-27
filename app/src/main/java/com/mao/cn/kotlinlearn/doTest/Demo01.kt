@@ -1,5 +1,7 @@
 package com.mao.cn.kotlinlearn.doTest
 
+import com.mao.cn.kotlinlearn.doTest.bean.Parent
+import com.mao.cn.kotlinlearn.doTest.bean.Student
 import java.util.*
 
 /**
@@ -78,6 +80,9 @@ fun main(args: Array<String>) {
     forFun()
 
     breakFun()
+
+    //-------实体类
+    doMainFun()
 
 }
 
@@ -363,6 +368,36 @@ fun breakFun() {
         if (it == 3) return@forEach
         println(" forEach换行it " + it)
     }
+}
+
+//-------------------实体类
+fun doMainFun(){
+
+    val student = Student(1000L)
+
+    println(" id "+student.id)
+    println(" name "+student.name)
+
+    val stu = Student("坤")
+
+    println(" id "+stu.id)
+    println(" name "+stu.name)
+
+    val stu01 = Student(12234L,"娜娜")
+
+    println(" id "+stu01.id)
+    println(" name "+stu01.name)
+
+
+    var p = Parent()
+    println(" id "+p.id)
+    println(" name "+p.name)
+
+    p = Parent("test")
+    println(" id "+p.id)
+    println(" name "+p.name)
+
+
 }
 
 
