@@ -1,7 +1,9 @@
 package com.mao.cn.kotlinlearn.doTest
 
 import com.mao.cn.kotlinlearn.doTest.bean.Stu
+import com.mao.cn.kotlinlearn.doTest.bean.StuDetail
 import com.mao.cn.kotlinlearn.doTest.bean.maxID
+import com.mao.cn.kotlinlearn.doTest.bean.minID
 
 /**
  * Created by zhangkun on 2017/5/26.
@@ -9,6 +11,8 @@ import com.mao.cn.kotlinlearn.doTest.bean.maxID
 
 fun main(args: Array<String>) {
     stuFun()
+    childFun()
+    stuDetail()
 }
 
 
@@ -29,5 +33,18 @@ fun stuFun(){
 
 fun childFun(){
     val a = maxID
+
     println("  a  $a")
+
+    val b = minID
+
+    println("  b  $b")
+}
+
+
+fun stuDetail(){
+    val stu = StuDetail("Detail")
+    println("  stu "+stu.name)
+    stu.initHello()
+    println("  stu "+stu.hello)
 }
