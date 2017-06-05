@@ -12,4 +12,10 @@ class Resources(val name: String) {
 
         fun say() = println("hello")
     }
+
+    override fun toString(): String {
+        return "Resources(name='$name')"
+    }
+
+
 }

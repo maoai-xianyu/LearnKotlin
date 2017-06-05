@@ -20,7 +20,7 @@ fun main(args:Array<String>){
     val resources = Resources("test")
     println(" resources "+resources.name)
 
-    println(" resources anonymous "+Resources.anonymous.name)
+    println(" resources anonymous "+Resources.anonymous)
 
     Resources.Companion.say()
     println(" -------------------")
