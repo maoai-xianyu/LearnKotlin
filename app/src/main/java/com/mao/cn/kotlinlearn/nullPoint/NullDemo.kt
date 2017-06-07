@@ -22,5 +22,6 @@ fun main(arg:Array<String>){
 // 安全调用符 ?.
 /**
  * 如果一个可空变量已经被判断为非空，再次调用它的方法和变量时，会自动将变量转换为非空类型，实现安全调用
+ *
  */
 fun printLengthOfString(s:String?) = println(s?.length)
