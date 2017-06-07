@@ -42,7 +42,6 @@ fun elvisFun() {
     val listFiles = File("./folder").listFiles()
     println(listFiles?.size ?: "Empty")
 
-
     val listFiles1 = File("app/src/main/java/com/mao/cn/kotlinlearn/nullPoint/folder").listFiles()
     println(listFiles1?.size ?: "Empty")
 
@@ -68,7 +67,7 @@ fun notNullFun() {
     for (file in files) {
         println(file.name)
     }
-    
+
     val filesFolder = File("folder").listFiles()!!
     for (file in filesFolder) {
         println(file.name)
