@@ -61,6 +61,8 @@ class MainActivity : AppCompatActivity() {
         KLog.d(Contants.TAG,"  SecondActivity.jump() "+ SecondActivity.jump())
         KLog.d(Contants.TAG,"  SecondActivity.jump(name) "+ SecondActivity.jump("测试"))
 
+        // 这事一个测试
+
     }
 }
 
