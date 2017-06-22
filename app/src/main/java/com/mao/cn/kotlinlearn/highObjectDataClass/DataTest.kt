@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.dataClass
+package com.mao.cn.kotlinlearn.highObjectDataClass
 
 /**
  * Created by zhangkun on 2017/6/5.

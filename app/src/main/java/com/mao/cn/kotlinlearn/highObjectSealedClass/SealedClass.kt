@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.sealedClass
+package com.mao.cn.kotlinlearn.highObjectSealedClass
 
 /**
  * Created by zhangkun on 2017/6/5.
