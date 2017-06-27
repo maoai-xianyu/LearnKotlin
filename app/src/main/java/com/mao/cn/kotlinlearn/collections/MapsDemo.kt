@@ -20,7 +20,19 @@ fun pairFun() {
 
 
     val array = intArrayOf(1, 2, 3)
-//    val list = listOf(0, *array, 4, 5)
+
+    val list = listOf(array)
+
+    println("-----"+list)
+
+    list.forEach { println(it) }
+
+
+
+    val map = mapOf(1 to 2, 3 to 4)
+    for((key, value) in map) {
+        println("$key -> $value")
+    }
 
 
 }
