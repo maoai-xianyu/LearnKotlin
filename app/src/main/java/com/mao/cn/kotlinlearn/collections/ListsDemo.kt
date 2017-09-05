@@ -1,6 +1,6 @@
 package com.mao.cn.kotlinlearn.collections
 
-import com.mao.cn.kotlinlearn.doTest.singletonList
+import com.mao.cn.kotlinlearn.K01FunDoTest.singletonList
 
 /**
  * Created by zhangkun on 2017/6/7.

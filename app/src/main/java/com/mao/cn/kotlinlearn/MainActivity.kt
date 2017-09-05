@@ -6,7 +6,7 @@ import com.mao.cn.kotlinlearn.contant.Contants
 import com.mao.cn.kotlinlearn.domain.UserDomain
 import com.mao.cn.kotlinlearn.domain.UserDomainOne
 import com.mao.cn.kotlinlearn.tools.toast
-import com.socks.library.KLog
+import com.safframework.log.L
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"hello kotlin",Toast.LENGTH_LONG).show()
         }*/
 
-        KLog.d(Contants.TAG,"jskldlajflkjsldjflksdjlfk")
+        L.d(Contants.TAG,"jskldlajflkjsldjflksdjlfk")
 
         btn.setOnClickListener {
             toast("ssss")
@@ -36,9 +36,9 @@ class MainActivity : AppCompatActivity() {
 
         val userDomain = UserDomain("hello","1021010918")
 
-        KLog.d(Contants.TAG," 用户名字 "+userDomain.name)
-        KLog.d(Contants.TAG," 用户id "+userDomain.id)
-        KLog.d(Contants.TAG," 用户信息 "+userDomain.toString())
+        L.d(Contants.TAG," 用户名字 "+userDomain.name)
+        L.d(Contants.TAG," 用户id "+userDomain.id)
+        L.d(Contants.TAG," 用户信息 "+userDomain.toString())
 
 
         val userDomainOne = UserDomainOne("hello one")
@@ -46,20 +46,20 @@ class MainActivity : AppCompatActivity() {
         userDomainOne.name  = "hello one one"
         userDomainOne.id = "111111111"
 
-        KLog.d(Contants.TAG," 用户名字one "+userDomain.name)
-        KLog.d(Contants.TAG," 用户id one "+userDomain.id)
-        KLog.d(Contants.TAG," 用户信息 one "+userDomain.toString())
+        L.d(Contants.TAG," 用户名字one "+userDomain.name)
+        L.d(Contants.TAG," 用户id one "+userDomain.id)
+        L.d(Contants.TAG," 用户信息 one "+userDomain.toString())
 
 
         val userDomainOneOne = UserDomainOne("hello one","2222222hello one")
 
-        KLog.d(Contants.TAG," 用户名字one userDomainOneOne "+userDomainOneOne.name)
-        KLog.d(Contants.TAG," 用户id one userDomainOneOne"+userDomainOneOne.id)
-        KLog.d(Contants.TAG," 用户信息 one userDomainOneOne"+userDomainOneOne.toString())
+        L.d(Contants.TAG," 用户名字one userDomainOneOne "+userDomainOneOne.name)
+        L.d(Contants.TAG," 用户id one userDomainOneOne"+userDomainOneOne.id)
+        L.d(Contants.TAG," 用户信息 one userDomainOneOne"+userDomainOneOne.toString())
 
-        KLog.d(Contants.TAG,"  SecondActivity.to() "+ SecondActivity.to())
-        KLog.d(Contants.TAG,"  SecondActivity.jump() "+ SecondActivity.jump())
-        KLog.d(Contants.TAG,"  SecondActivity.jump(name) "+ SecondActivity.jump("测试"))
+        L.d(Contants.TAG,"  SecondActivity.to() "+ SecondActivity.to())
+        L.d(Contants.TAG,"  SecondActivity.jump() "+ SecondActivity.jump())
+        L.d(Contants.TAG,"  SecondActivity.jump(name) "+ SecondActivity.jump("测试"))
 
         // 这事一个测试
 

@@ -1,8 +1,8 @@
-package com.mao.cn.kotlinlearn.doTest
+package com.mao.cn.kotlinlearn.K01FunDoTest
 
-import com.mao.cn.kotlinlearn.doTest.bean.DogC
-import com.mao.cn.kotlinlearn.doTest.bean.DogG
-import com.mao.cn.kotlinlearn.doTest.bean.DogP
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.DogC
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.DogG
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.DogP
 
 /**
  * Created by zhangkun on 2017/6/2.

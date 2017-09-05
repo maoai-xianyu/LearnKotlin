@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import com.mao.cn.kotlinlearn.contant.Contants
 import com.mao.cn.kotlinlearn.domain.UserDomainOne
 import com.mao.cn.kotlinlearn.tools.toast
-import com.socks.library.KLog
+import com.safframework.log.L
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
@@ -18,38 +18,40 @@ class SecondActivity : AppCompatActivity() {
 
         val serializableExtra = intent.getSerializableExtra(USER) as UserDomainOne
 
-        KLog.debug(Contants.TAG,serializableExtra)
+        L.d(Contants.TAG, serializableExtra.toString())
 
         toast(serializableExtra.name)
         tv_show_user_name.text = serializableExtra.name
 
         tv_show_user_id.text = serializableExtra.id
     }
-    // 伴生对象  对应的 static
-    companion object{
-        fun to() : String = "mmms"
 
-        fun jump() : String {
+    // 伴生对象  对应的 static
+    companion object {
+        fun to(): String = "mmms"
+
+        fun jump(): String {
             return "这是一个测试"
         }
 
-        fun jump(name:String) : String {
-            return name+" 这我的名字"
+        fun jump(name: String): String {
+            return name + " 这我的名字"
         }
 
         // extra key
         val USER = "USER"
-        fun startActivity(conext:Context,user:UserDomainOne){
-            var intent = Intent(conext,SecondActivity::class.java)
-            intent.putExtra(USER,user)
-            KLog.debug(Contants.TAG,user)
-            KLog.debug(Contants.TAG,"ssss")
+
+        fun startActivity(conext: Context, user: UserDomainOne) {
+            var intent = Intent(conext, SecondActivity::class.java)
+            intent.putExtra(USER, user)
+            L.i(Contants.TAG, user.toString())
+            L.i(Contants.TAG, "ssss")
             conext.startActivity(intent)
         }
     }
 
-    fun showId(id:String) : String{
-        return id+" id 的显示"
+    fun showId(id: String): String {
+        return id + " id 的显示"
     }
 
 }

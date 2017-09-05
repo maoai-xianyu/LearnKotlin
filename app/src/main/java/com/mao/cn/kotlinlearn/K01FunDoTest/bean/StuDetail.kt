@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.doTest.bean
+package com.mao.cn.kotlinlearn.K01FunDoTest.bean
 
 /**
  * Created by zhangkun on 2017/6/1.

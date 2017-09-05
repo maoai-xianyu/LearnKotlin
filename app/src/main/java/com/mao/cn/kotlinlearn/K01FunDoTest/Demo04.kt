@@ -1,9 +1,9 @@
-package com.mao.cn.kotlinlearn.doTest
+package com.mao.cn.kotlinlearn.K01FunDoTest
 
-import com.mao.cn.kotlinlearn.doTest.bean.Stu
-import com.mao.cn.kotlinlearn.doTest.bean.StuDetail
-import com.mao.cn.kotlinlearn.doTest.bean.maxID
-import com.mao.cn.kotlinlearn.doTest.bean.minID
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.Stu
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.StuDetail
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.maxID
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.minID
 
 /**
  * Created by zhangkun on 2017/5/26.

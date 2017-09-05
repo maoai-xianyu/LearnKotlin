@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.doTest.bean
+package com.mao.cn.kotlinlearn.K01FunDoTest.bean
 
 import java.io.Serializable
 

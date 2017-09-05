@@ -1,16 +1,13 @@
-package com.mao.cn.kotlinlearn.doTest
+package com.mao.cn.kotlinlearn.K01FunDoTest
 
-import com.mao.cn.kotlinlearn.doTest.bean.Parent
-import com.mao.cn.kotlinlearn.doTest.bean.Student
-import java.util.*
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.Parent
+import com.mao.cn.kotlinlearn.K01FunDoTest.bean.Student
 
 /**
  * Created by zhangkun on 2017/5/23.
  */
 
-fun sum(a: Int, b: Int): Int {
-    return a + b
-}
+
 
 fun main(args: Array<String>) {
 
@@ -63,8 +60,6 @@ fun main(args: Array<String>) {
     //-----------
 
     println(addVararg(2, 5, 2, 4, 5, 5))
-    arrayFun()
-    arrayNull()
 
     //----------
     operatorFun()
@@ -213,41 +208,6 @@ fun addVararg(a: Int, b: Int, vararg n: Int): Int {
     return sum
 }
 
-fun <T> singletonList(item: T): List<T> = listOf(item)
-
-//-------------------------数组cd
-
-fun arrayFun() {
-    val a = arrayOf("hello", "world")
-    for (temp in a) {
-        println(" temp " + temp)
-    }
-}
-
-fun arrayNull() {
-    val emptyArray1: Array<String?> = emptyArray()
-    val emptyArray2: Array<String?> = arrayOfNulls(0)
-    println(Arrays.equals(emptyArray1, emptyArray2))
-
-
-    val emptyArray3: Array<String?> = arrayOf("test2", "test2")
-
-    println(emptyArray3.iterator())
-
-
-    val squares = Array<Int>(5, { it -> (it + 1) * (it + 1) })
-
-    for (square in squares) {
-
-        println("  square " + square)
-    }
-
-
-    squares.forEach { i: Int -> println("  测试  " + i) }
-
-    squares.forEach { println(it) }
-}
-
 //--------------------- 运算符
 fun operatorFun() {
 
@@ -371,31 +331,31 @@ fun breakFun() {
 }
 
 //-------------------实体类
-fun doMainFun(){
+fun doMainFun() {
 
     val student = Student(1000L)
 
-    println(" id "+student.id)
-    println(" name "+student.name)
+    println(" id " + student.id)
+    println(" name " + student.name)
 
     val stu = Student("坤")
 
-    println(" id "+stu.id)
-    println(" name "+stu.name)
+    println(" id " + stu.id)
+    println(" name " + stu.name)
 
-    val stu01 = Student(12234L,"娜娜")
+    val stu01 = Student(12234L, "娜娜")
 
-    println(" id "+stu01.id)
-    println(" name "+stu01.name)
+    println(" id " + stu01.id)
+    println(" name " + stu01.name)
 
 
     var p = Parent()
-    println(" id "+p.id)
-    println(" name "+p.name)
+    println(" id " + p.id)
+    println(" name " + p.name)
 
     p = Parent("test")
-    println(" id "+p.id)
-    println(" name "+p.name)
+    println(" id " + p.id)
+    println(" name " + p.name)
 
 
 }
