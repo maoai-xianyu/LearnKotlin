@@ -1,11 +1,11 @@
-package com.mao.cn.kotlinlearn.K03TKotlinLearn
+package com.mao.cn.kotlinlearn.KotlinLearn.K03
 
 /**
  * Created by Ming on 2017/9/12.
  */
 fun main(args: Array<String>) {
     
-    val user = User(0,"Hello")
+    val user = User(0, "Hello")
     println(user)
 
     HelloKotlin::class.constructors.map { println(it) }

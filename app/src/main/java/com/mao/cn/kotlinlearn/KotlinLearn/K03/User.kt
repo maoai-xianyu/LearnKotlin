@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.K03TKotlinLearn
+package com.mao.cn.kotlinlearn.KotlinLearn.K03
 
 /**
  * Created by Ming on 2017/9/12.
