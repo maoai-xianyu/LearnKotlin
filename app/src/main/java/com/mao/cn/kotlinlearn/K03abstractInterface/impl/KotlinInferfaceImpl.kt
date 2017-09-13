@@ -1,6 +1,6 @@
-package com.mao.cn.kotlinlearn.abstractInterface.impl
+package com.mao.cn.kotlinlearn.K03abstractInterface.impl
 
-import com.mao.cn.kotlinlearn.abstractInterface.KotlinInterface
+import com.mao.cn.kotlinlearn.K03abstractInterface.KotlinInterface
 
 /**
  * Created by zhangkun on 2017/6/5.

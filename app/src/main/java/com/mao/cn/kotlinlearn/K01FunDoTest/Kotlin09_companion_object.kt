@@ -3,7 +3,7 @@ package com.mao.cn.kotlinlearn.K01FunDoTest
 /**
  * Created by zhangkun on 2017/5/23.
  */
-class Demo03 {
+class Kotlin09_companion_object {
 
     companion object {
         @JvmStatic

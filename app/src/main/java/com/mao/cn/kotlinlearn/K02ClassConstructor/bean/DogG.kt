@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.K01FunDoTest.bean
+package com.mao.cn.kotlinlearn.K02ClassConstructor.bean
 
 /**
  * Created by zhangkun on 2017/6/2.
@@ -6,7 +6,9 @@ package com.mao.cn.kotlinlearn.K01FunDoTest.bean
  *
  *
  */
-open class DogG(val name:String){
+open class DogG(open val name:String){
+
+    open val desc = "爷爷"
     open var age = 0
     open fun say() = "My name is $name,$age years old"
 

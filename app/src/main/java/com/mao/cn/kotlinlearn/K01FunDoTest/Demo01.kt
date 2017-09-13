@@ -1,8 +1,5 @@
 package com.mao.cn.kotlinlearn.K01FunDoTest
 
-import com.mao.cn.kotlinlearn.K01FunDoTest.bean.Parent
-import com.mao.cn.kotlinlearn.K01FunDoTest.bean.Student
-
 /**
  * Created by zhangkun on 2017/5/23.
  */
@@ -19,10 +16,6 @@ fun main(args: Array<String>) {
     val s2 = "${s1.replace("is", "was")}, but now is $a"
     println(s2)
     println(s2)
-
-    println("  maxof  " + maxof(2, 3))
-    println(" maxOf01   " + maxOf01(2, 3))
-
     //-----------------------
 
     printProduct("6", "7")
@@ -45,14 +38,6 @@ fun main(args: Array<String>) {
 
     listFor01()
 
-    //-----------
-
-    println(describe(1))
-    println(describe("Hello"))
-    println(describe(1000L))
-    println(describe(2))
-    println(describe("other"))
-
     //-----
     ranges()
     inRanges()
@@ -61,39 +46,8 @@ fun main(args: Array<String>) {
 
     println(addVararg(2, 5, 2, 4, 5, 5))
 
-    //----------
-    operatorFun()
-
-    //------when
-    whenFun(1)
-    whenFun(3)
-    whenFun(20)
-
-    whenFunNum(2)
-
-    //------ fun
-    forFun()
-
-    breakFun()
-
-    //-------实体类
-    doMainFun()
-
 }
 
-fun maxof(a: Int, b: Int): Int {
-
-    if (a > b) {
-
-        readLine()
-        return a
-    } else {
-        return b
-    }
-}
-
-
-fun maxOf01(a: Int, b: Int) = if (a > b) a else b
 
 //------------------------------
 
@@ -163,18 +117,6 @@ fun listFor01() {
 
 //----------------------------
 
-fun describe(obj: Any): String =
-        when (obj) {
-            1 -> "one"
-            "Hello" -> "Greeting"
-            is Long -> "Long"
-            !is String -> "not a string"
-            else -> "Unknown"
-        }
-
-
-//----------------------------
-
 fun ranges() {
 
     val x = 10
@@ -206,158 +148,6 @@ fun addVararg(a: Int, b: Int, vararg n: Int): Int {
     }
 
     return sum
-}
-
-//--------------------- 运算符
-fun operatorFun() {
-
-    val num1 = 1
-    val num2 = 1
-    println((num1 == num2))
-
-
-    val a = " test1"
-    val b = " test2"
-    println("测试  " + (a?.equals(b) ?: (b == null)))
-    println("测试  " + !(a?.equals(b) ?: (b == null)))
-
-
-    val c = ""
-    val d = " test2"
-    println("测试  " + (c?.equals(d) ?: (d == null)))
-    println("测试  " + !(c?.equals(d) ?: (d == null)))
-
-
-    val e = ""
-    val f = ""
-    println("测试  " + (e?.equals(f) ?: (f == null)))
-    println("测试  " + !(e?.equals(f) ?: (f == null)))
-
-
-}
-
-//--------------when  ---- switch
-fun whenFun(x: Any) {
-
-    when (x) {
-        1, 2 -> println("x = $x")
-        else -> println(" x is nerther 1 0r 2")
-    }
-
-    when (x) {
-
-        !is Int -> println("x = $x")
-        in 0..10 -> println("x = $x  x is between 0 and 10")
-        else -> println(" x is over 10 ")
-    }
-
-}
-
-fun whenFunNum(x: Int) {
-
-    val isOdd = when {
-        (x and 1) == 1 -> true
-        else -> false
-    }
-
-    println("  isOdd " + isOdd)
-}
-
-//------------- for
-fun forFun() {
-
-    val arrayInt = intArrayOf(1, 2, 3, 4, 5)
-    for (item in arrayInt) {
-        println(" $item")
-        println(" 测试  " + item)
-    }
-
-    arrayInt.forEach { println("  HAH  " + it) }
-
-    // 遍历数组角标
-    for (item in arrayInt.indices) {
-        println(" arrayInt[$item]  is " + arrayInt[item])
-        println(" arrayInt[$item]  is ${arrayInt[item]}")
-    }
-
-    // withIndex
-    for ((index, value) in arrayInt.withIndex()) {
-
-        println(" arrayInt[$index]  is $value")
-    }
-
-    for (i in 1..5) println(i) //输出 1 到 5 的数字
-
-    for (i in 5 downTo 1) println(i) //输出 5 到 1 的数字
-
-    for (i in 5 downTo 1 step 3) println(i) //输出 5 2
-
-    for (i in 1..5 step 2) println(i) //输出 1 3 5
-
-}
-
-//----------------- break   continue   return   loop 循环
-//---- 注意 return 后面的写法，换行和不换行有特别大的差距
-fun breakFun() {
-    loop@ for (i in 1..10) {
-        println("  i  is $i")
-        for (j in 1..10) {
-            if (i == 3) break@loop //终止 i 循环
-        }
-    }
-
-
-    val ints = intArrayOf(1, 3, 3, 4)
-
-
-    ints.forEach {
-        if (it == 3) return println(" 不换行 it " + it)
-    }
-
-    ints.forEach {
-        if (it == 3) return
-        println(" 换行it " + it)
-    }
-
-    ints.forEach lit@ {
-        if (it == 3) return@lit
-        println(" 换行it " + it)
-    }
-
-    ints.forEach {
-        if (it == 3) return@forEach
-        println(" forEach换行it " + it)
-    }
-}
-
-//-------------------实体类
-fun doMainFun() {
-
-    val student = Student(1000L)
-
-    println(" id " + student.id)
-    println(" name " + student.name)
-
-    val stu = Student("坤")
-
-    println(" id " + stu.id)
-    println(" name " + stu.name)
-
-    val stu01 = Student(12234L, "娜娜")
-
-    println(" id " + stu01.id)
-    println(" name " + stu01.name)
-
-
-    var p = Parent()
-    println(" id " + p.id)
-    println(" name " + p.name)
-
-    p = Parent("test")
-    println(" id " + p.id)
-    println(" name " + p.name)
-
-
 }
 
 

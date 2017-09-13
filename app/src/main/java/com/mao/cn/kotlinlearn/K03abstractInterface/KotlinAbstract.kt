@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.abstractInterface
+package com.mao.cn.kotlinlearn.K03abstractInterface
 
 /**
  * Created by zhangkun on 2017/6/2.

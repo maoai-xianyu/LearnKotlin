@@ -1,7 +1,12 @@
-package com.mao.cn.kotlinlearn.K01FunDoTest.bean
+package com.mao.cn.kotlinlearn.K02ClassConstructor.bean
 
 /**
  * Created by zhangkun on 2017/5/26.
+ */
+/**
+ * 1、需要自定义 setter 或 getter 的属性，不能放在类头里定义，必须在类体内定义
+ * 2、getter 是一个没有参数、返回类型与属性类型相同的函数。
+ * 3、setter 的参数列表一般有一个与属性类型相同的参数，没有返回值
  */
 class Stu(name: String) {
     // 自定义添加setter 和 getter 方法。 那么在调用的时候，需要设置值

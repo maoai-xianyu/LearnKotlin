@@ -24,6 +24,10 @@ fun arrayCreateKnow() {
     for (s in a) {
         print(s + "")
     }
+    println("-----------")
+    a.map {
+        println(it+" map")
+    }
 
     //如果我们想像 Java 中那样创建一个长度指定，每个值都是 null 的数组，就要用 kotlin.arrayOfNulls() 函数
 
@@ -87,7 +91,7 @@ fun arrayNull() {
     squares.forEach { i: Int -> println("  测试  " + i) }
 
     // it 代表当前引用的对象
-    squares.forEach { println(it) }
+    squares.forEach { print(" "+it) }
 
 }
 
