@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.mutableCollection
+package com.mao.cn.kotlinlearn.K06Collection.mutableCollection
 
 /**
  * Created by zhangkun on 2017/6/7.

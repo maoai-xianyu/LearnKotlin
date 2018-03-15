@@ -86,10 +86,16 @@ fun commpareEqual(c: String?, d: String): String {
     }
 }
 
-private fun ssdsd(x: String?, y: String): String {
+fun ssdsd(x: String?, y: String): String {
     return x ?: y
 }
 
-private fun commpareEqual2(x: String?, y: String): String {
+fun commpareEqual2(x: String?, y: String): String {
     return if (x != null) if (x == y) x else y else y
 }
+
+
+fun commpareEqual3(x: String?, y: String): Int {
+    return x?.length ?: 1
+}
+

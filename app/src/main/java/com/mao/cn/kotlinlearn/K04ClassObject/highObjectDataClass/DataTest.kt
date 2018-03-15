@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
     println(a.toString())
 
     //copy() 函数：这个函数让我们可以复制一个对象，然后修改一下属性。
-    val b = a.copy("malex")
+    val b = a.copy(name = "malex")
 
     println(b.toString())
 

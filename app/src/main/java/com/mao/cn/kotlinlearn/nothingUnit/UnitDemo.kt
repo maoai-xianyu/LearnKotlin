@@ -1,5 +1,9 @@
 package com.mao.cn.kotlinlearn.nothingUnit
 
+import android.content.Context
+import android.content.Intent
+import android.widget.TextView
+
 /**
  * Created by zhangkun on 2017/6/7.
  * Unit 是一个真正的类，继承自 Any 类，只有一个值，也就是所谓的“单例”（目的在于函数返回 Unit 时避免分配内存）
@@ -20,6 +24,11 @@ fun main(args: Array<String>) {
     println(nothing.toString())
     fail()
     failFun()
+    val context :Context
+    val intent = Intent()
+    val textView = TextView(context)
+    val data:String = intent.getStringExtra("key") ?: failFun()
+    textView.text = data
 
 }
 
