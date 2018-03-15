@@ -70,4 +70,26 @@ fun operatorFun() {
         println(i)
     }
 
+
+}
+
+fun commpareEqual(c: String?, d: String): String {
+
+    return if (c != null) {
+        if (c == d) {
+            c
+        } else {
+            d
+        }
+    } else {
+        d
+    }
+}
+
+private fun ssdsd(x: String?, y: String): String {
+    return x ?: y
+}
+
+private fun commpareEqual2(x: String?, y: String): String {
+    return if (x != null) if (x == y) x else y else y
 }

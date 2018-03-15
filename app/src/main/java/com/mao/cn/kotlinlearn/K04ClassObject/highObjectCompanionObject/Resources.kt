@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.highObjectCompanionObject
+package com.mao.cn.kotlinlearn.K04ClassObject.highObjectCompanionObject
 
 /**
  * Created by zhangkun on 2017/6/5.
@@ -17,5 +17,9 @@ class Resources(val name: String) {
         return "Resources(name='$name')"
     }
 
+
+    fun sayHello(){
+        println(" Resources hello")
+    }
 
 }

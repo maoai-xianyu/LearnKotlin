@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.highObjectCompanionObject
+package com.mao.cn.kotlinlearn.K04ClassObject.highObjectCompanionObject
 
 /**
  * Created by zhangkun on 2017/6/5.

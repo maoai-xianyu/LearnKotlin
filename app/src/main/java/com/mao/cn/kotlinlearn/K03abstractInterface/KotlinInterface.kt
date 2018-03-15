@@ -10,4 +10,5 @@ interface KotlinInterface {
     fun bar() {
         println("bar")
     }
+    val mms:String
 }

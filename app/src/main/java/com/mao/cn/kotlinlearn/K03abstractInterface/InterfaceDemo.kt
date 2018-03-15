@@ -12,4 +12,6 @@ fun main(args: Array<String>){
     println(" ----  "+inter.prop)
     inter.foo(1000)
     inter.bar()
+    println(" ----  "+inter.mms)
+
 }

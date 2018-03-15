@@ -16,5 +16,6 @@ class KotlinInterfaceImpl : KotlinInterface {
         super.bar()
     }
 
-
+    override val mms: String
+        get() = "this is a val"
 }
