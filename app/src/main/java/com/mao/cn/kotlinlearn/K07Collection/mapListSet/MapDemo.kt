@@ -1,4 +1,4 @@
-package com.mao.cn.kotlinlearn.K06Collection.mutableCollection.mapListSet
+package com.mao.cn.kotlinlearn.K07Collection.mutableCollection.mapListSet
 
 /**
  * Created by zhangkun on 2017/6/7.
