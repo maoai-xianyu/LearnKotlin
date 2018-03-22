@@ -13,3 +13,7 @@ fun Context.toast(msg: String?, length: Int = Toast.LENGTH_LONG) {
 
 fun to(): String = "mmms"
 
+
+fun isOdd(num: Int): Boolean {
+    return num % 2 == 1
+}
