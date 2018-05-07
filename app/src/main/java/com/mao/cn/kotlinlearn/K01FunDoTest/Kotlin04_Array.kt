@@ -56,12 +56,12 @@ fun arrayCreateArrar() {
     val arrayOfInt = arrayOf(1, 2, 3, 4)
 
     for (i in intArray) {
-        print(" " + i)
+        print(" $i")
     }
 
     println("arrayOfInt ")
     for (i in arrayOfInt) {
-        print(" " + i)
+        print(" $i")
     }
 
     //IntArray 类并不是 Array 类的子类，所以上面两个数组并不是相同的对象
@@ -85,7 +85,7 @@ fun arrayNull() {
     val squares = Array(5, { it -> (it + 1) * (it + 1) })
 
     for (square in squares) {
-        print("  square " + square)
+        print("  square $square")
     }
 
     squares.forEach { i: Int -> println("  测试  " + i) }
