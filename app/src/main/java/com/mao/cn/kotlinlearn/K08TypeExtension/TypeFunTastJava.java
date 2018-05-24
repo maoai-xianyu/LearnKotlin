@@ -17,5 +17,11 @@ public class TypeFunTastJava {
         list.add(3);
         PublicFunKt.swap(list,0,1);
         System.out.println(list);
+
+
+        int m = 0;
+        boolean odd = PublicFunKt.isOdd(m);
+        System.out.println(" 奇数 "+odd);
+
     }
 }
