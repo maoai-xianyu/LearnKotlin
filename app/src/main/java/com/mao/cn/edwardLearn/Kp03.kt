@@ -21,6 +21,7 @@ fun main(array: Array<String>) {
     val personD = personA
 
     println(personA === personD)
+    println(personA == personD)
     println(personA != personB)
     println(personA !== personC)
 }
