@@ -12,6 +12,8 @@ fun main(args: Array<String>) {
     nullSafetyPartOne()
     println("-------------------------------")
     nullSafetyPartTwo()
+    println("-------------------------------")
+    nullSafetyPartThree()
 }
 
 
@@ -68,12 +70,43 @@ fun nullSafetyPartTwo() {
     val strTemp: String? = null
     // 转换
     // 转换报错在当前行
-   /* val str1: String = strTemp!!.toUpperCase()
-    println(str1)*/
+    /* val str1: String = strTemp!!.toUpperCase()
+     println(str1)*/
 
     // 报错发送在赋值的地方
-    val str1: String = strTemp!!
+    /*val str1: String = strTemp!!
     val str3 = str1.toUpperCase()
-    println(str3)
+    println(str3)*/
 
+}
+
+/**
+ * let funtion
+ *
+ * it
+ */
+fun nullSafetyPartThree() {
+
+    val nullableString: String? = null
+    val nonNullableString = "Hello world"
+
+    println(nullableString == nonNullableString)
+
+
+    val name: String? = "John"
+
+    // printName(name) 报错 是因为 non-null 和 null 不是同一个类型
+    // 方案一 printName(name!!)
+    // 方案二 if (name != null) printName(name)
+    // 方案三
+    /*if(name != null){
+        val copy = name
+        printName(copy)
+    }*/
+    name?.let { printName(it) }
+
+}
+
+fun printName(name: String) {
+    println("Name is $name")
 }
