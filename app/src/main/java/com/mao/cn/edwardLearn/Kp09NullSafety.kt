@@ -105,6 +105,9 @@ fun nullSafetyPartThree() {
     }*/
     name?.let { printName(it) }
 
+    val e = ClassE()
+    e.printlMe()
+
 }
 
 fun printName(name: String) {
