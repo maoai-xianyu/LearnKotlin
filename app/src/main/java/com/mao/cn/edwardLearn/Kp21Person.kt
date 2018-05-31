@@ -13,7 +13,7 @@ class Kp21Person(val name: String, var age: Int) {
     }
 
     override fun toString(): String {
-        return "Kp18Person(name='$name', age=$age)"
+        return "Kp21Person(name='$name', age=$age)"
     }
 
 }
