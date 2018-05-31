@@ -1,5 +1,7 @@
 package com.mao.cn.kotlinlearn.K09HighFunction
 
+import java.io.File
+
 /**
  * author:  zhangkun .
  * date:    on 2018/5/25.
@@ -16,3 +18,10 @@ fun main(args: Array<String>) {
 }
 
 fun Int.countOfBinaryOnes() = (0..21).count { (this shr it) and 1 == 1 }
+
+
+fun File.listFilesReadable(): String {
+    return if (isDirectory)
+        listFiles().joinToString("\n") { it.name }
+    else name
+}
