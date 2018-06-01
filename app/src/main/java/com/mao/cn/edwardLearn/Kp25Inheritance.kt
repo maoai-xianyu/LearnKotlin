@@ -44,3 +44,4 @@ class CompactCar(modeName: String):Car(modeName){
         println("The model name of this compactCar is $modeName")
     }
 }
+
