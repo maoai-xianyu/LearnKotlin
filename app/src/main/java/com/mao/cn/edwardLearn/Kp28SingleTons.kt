@@ -9,9 +9,8 @@ package com.mao.cn.edwardLearn
  */
 fun main(args: Array<String>) {
 
-}
-
-
-object SingleTonsClass {
+    println(SingleTonsClass.currentYear)
+    println(SingleTonsClass.getTag())
+    println(SingleTonsClass.getCopyright())
 
 }
