@@ -15,7 +15,6 @@ import java.util.Base64;
  * author:  zhangkun .
  * date:    on 2018/3/22.
  */
-
 public class JavaEight {
 
 

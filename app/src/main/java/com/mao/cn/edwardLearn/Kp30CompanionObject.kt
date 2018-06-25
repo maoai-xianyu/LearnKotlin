@@ -7,7 +7,7 @@ package com.mao.cn.edwardLearn
  * 办事对象
  */
 
-class Kp29CompanionObject {
+class Kp30CompanionObject {
 
     companion object {
         private val privateVar = 10
@@ -19,22 +19,6 @@ class Kp29CompanionObject {
 
     fun asscessPrivateVar() = "Accessing privateVar : $privateVar"*/
 
-
-    val oneString: String
-
-    constructor(str: String) {
-        oneString = str
-    }
-
-    constructor(str: String, lowerCase: Boolean) {
-
-        if (lowerCase) {
-            oneString = str.toLowerCase()
-        } else {
-            oneString = str.toUpperCase()
-        }
-    }
-
 }
 
 
@@ -45,9 +29,6 @@ fun main(args: Array<String>) {
     /**
      * companion object
      */
-    println(Kp29CompanionObject.Companion.accessPrivateVar())
-    println(Kp29CompanionObject.accessPrivateVar())
-
-   /* val test = Kp29CompanionObject("this is a turn.", true)
-    println(test.oneString)*/
+    println(Kp30CompanionObject.Companion.accessPrivateVar())
+    println(Kp30CompanionObject.accessPrivateVar())
 }
